@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Barlow&display=swap" rel="stylesheet">
+<title></title>
+
 	<style type="text/css">
-		
-		#drew{
-			width:700px;
-			height:500px;
-			background-image: url("https://images.squarespace-cdn.com/content/v1/5c2d2d10b27e398709a72eb2/1589136385966-J3QKIEHAL8918AMAHF4Q/beginner_sourdough_bread_recipe.jpg");
-			background-size: cover;
+		#menu{
+			height: 30px;
+			background-color: moccasin;
+			margin: 0px;
+			transition: 0.2s;
+			padding-top: 5px;
 		}
-		#drew:hover{
-			background-image: url("https://www.jsausa.com/wp-content/uploads/2019/11/Master-Chef-Kid-Flambe.gif");
-			width:700px;
-			height: 500px;
-			transition: flip 5s;
-		}
+		#menu:hover{
 
-		#websitelink{
-
-
-			position: fixed;
-			height: 100px;
-			width: 100px;
-			position: relative;
-			position: absolute;
-			background-color: cornsilk;
-			top: 50%;
-			left: 50%;
+			height: 60px;
+			transition: 0.2s;
+			font-size: 3vw
 
 		}
+	.categories {
+		position: relative;
+		display: inline-block;
+		height: 98%;
+		width: 32.5%;
+		transition: 0s;
+		color: white;
+		text-align: center;
+		font-size: 4vh 3vw; 
+		font-family: 'Barlow', sans-serif;
+
+	}
+	.categories:hover{
+		color: black;
+		transition: 0s;
+		font-family: 'Arimo', sans-serif;
+
+	}
+
+body{
+	margin: 0px;
+}
+
 	</style>
-	
 </head>
 <body>
 
-<div id="drew">
-	
-
+<div id="menu">
+	<a href="file:///Users/student/Desktop/repositories/Drewwallack.github.io/Journal.html">
+	<div class="categories">Journal</div>
+	</a>
+	<a href="file:///Users/student/Desktop/repositories/Drewwallack.github.io/Projects.html">
+	<div class="categories">Projects</div>
+	</a>
+	<a href="file:///Users/student/Desktop/repositories/Drewwallack.github.io/Projects.html">
+	<div class="categories">About Me!</div>
+	</a>
 </div>
-<a href="file:///Users/student/Desktop/repositories/Drewwallack.github.io/website.html">
-<div id="websitelink">
-Click Here To Go To My Website!
-</a>
-
-
-	</div>
-
 
 </body>
 </html>
