@@ -1,21 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Barlow&display=swap" rel="stylesheet">
+
 <style type="text/css">
-	body{
+		#menu{
+			height: 30px;
+			background-color: moccasin;
+			margin: 0px;
+			transition: 0.2s;
+			padding-top: 5px;
+		}
+		#menu:hover{
+
+			height: 60px;
+			transition: 0.2s;
+			font-size: 3vw
+
+		}
+	.categories{
+		position: relative;
+		display: inline-block;
+		height: 98%;
+		width: 100%;
+		transition: 0s;
+		color: white;
+		text-align: center;
+		font-size: 4vh 3vw; 
+		font-family: 'Barlow', sans-serif;
 
 	}
-
-
-
-
+	.categories:hover{
+		color: black;
+		transition: 0s;
+		font-family: 'Arimo', sans-serif;
+	}
+	.entry{
+		width: 66.6%;
+		position: relative;
+		text-align: left;
+		font-size: 12;
+		left: 33.3%;
+		top: 100px;
+	}
+body{
+	margin: 0px;
+}
 </style>
-
-
 </head>
 <body>
+<div class="entry">
+hello
+<div class="entrytitle">
+</div>
 
-hello journal this 
+</div>
+
+
+<div id="menu">
+	<a href="index.html">
+		<div class="categories">
+		Home
+	</div>
+</a>
+</div>
 
 </body>
 </html>
