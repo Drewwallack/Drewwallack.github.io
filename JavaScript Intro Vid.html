@@ -87,7 +87,7 @@ header {
   </head>
   <body>
     <header>
-      <h1>JS For Beginners</h1>
+      <h1>JavaScript</h1>
     </header>
 
     <section class="container">
@@ -106,20 +106,20 @@ header {
       </form>
 
       <ul id="users"></ul>
-
-      <ul class="items">
-        <li class="item">Item 1</li>
-        <li class="item">Item 2</li>
-        <li class="item">Item 3</li>
-      </ul> 
     </section>
     
     <script type="text/javascript">
-
-    	const btn = document.querySelector('.btn')
+      let nameField = document.querySelector('#name')
+      let emailField = document.querySelector('#email')
+    	let btn = document.querySelector('.btn')
     	btn.addEventListener('click', function click(hey){
     		hey.preventDefault();
     		console.log('Ive been clicked!')
+        console.log(nameField.value);
+        console.log(emailField.value);
+        nameField.value = '';
+        emailField.value = '';
+
     	})
     </script>
   </body>
