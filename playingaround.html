@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	let x = 0
+
+	let intCount = setInterval(count, 1000)
+	function count() {
+		if (x==100){
+			clearInterval(intCount);
+		};
+		if (x % 3 == 0 && x % 5 !== 0) {
+			console.log('fizz');
+		};
+		if (x % 5 == 0 && x % 3 !== 0) {
+			console.log('buzz');
+		}
+		if (x % 3 == 0 && x % 5 == 0) {
+			console.log('fizzbuzz')
+		}
+			console.log(x);
+			x=x+1
+		}
+
+
+</script>
+</body>
+</html>
