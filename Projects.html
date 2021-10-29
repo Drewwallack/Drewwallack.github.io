@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet">
 <style type="text/css">
 	#menu{
 		height: 30px;
@@ -120,5 +123,64 @@
 	</div>
 </div>
 </center>
+<script type="text/javascript">
+	let button = document.querySelector('#pickbutton');
+	let box = document.getElementById('centertextbox')
+	let boxText = document.getElementById('centertext');
+	let colors = ['red', 'green', 'blue', 'yellow', 'blue', 'pink', 'black'];
+	let runColorShift = 0;
+	let executed = true;
+
+	function runCancelColorShift() {
+		let color = setInterval(colorShift, 170)
+		boxText.innerHTML = 'in...';
+		boxText.style.fontFamily = "'Libre Franklin', sans-serif";
+		boxText.style.fontSize = '130px';
+		setInterval(count, 1000)
+		let sec = 11;
+			function count() {
+			if (sec <= 0) {
+				clearInterval(color);
+				boxText.innerHTML = 'redirecting...';
+				boxText.style.fontSize = '60px'
+				// make another interval to animate "..." after redirecting
+			} else {
+			sec = sec-1;
+			boxText.innerHTML = sec;
+			console.log(sec);
+			}
+		}
+	}
+	function colorShift() {
+		let num = Math.round(Math.random()*6);
+		boxText.style.color = colors[num];
+		boxText.style.fontFamily = "'Libre Franklin', sans-serif";
+		boxText.style.fontSize = '130px';
+
+	}
+
+		
+	
+		
+	
+
+
+	//
+button.addEventListener('click', runCancelColorShift);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 </body>
 </html>
