@@ -8,12 +8,8 @@
 
 <script type="text/javascript">
 	let x = 0
-
-	let intCount = setInterval(count, 1000)
+	let intCount = 0
 	function count() {
-		if (x==100){
-			clearInterval(intCount);
-		};
 		if (x % 3 == 0 && x % 5 !== 0) {
 			console.log('fizz');
 		};
@@ -27,6 +23,21 @@
 			x=x+1
 		}
 
+		let intCount1 = 0
+		let intCount4 = 0
+		let executed = false;
+		document.addEventListener('click', intCount2)
+		function intCount2() {
+			intCount1 = setInterval(intCount3, 10)
+		}
+		function intCount3() {
+			if (x==100) {
+				intCount1 = undefined;
+			}
+			console.log(x)
+			x++;
+			executed = true;
+		}
 
 </script>
 </body>

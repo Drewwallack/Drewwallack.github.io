@@ -77,6 +77,15 @@
   		perspective: 1000px;
   		animation-iteration-count: infinite;
 }	
+	#big-text{
+		color: white;
+		font-size: 100px;
+		position: relative;
+		text-align: center;
+		top: 150px;
+		font-family: 'Arimo', sans-serif;
+
+	}
 	@keyframes shake {
   	10%, 90% {
     	transform: translate3d(-1px, 0, 0);
@@ -123,62 +132,6 @@
 	</div>
 </div>
 </center>
-<script type="text/javascript">
-	let button = document.querySelector('#pickbutton');
-	let box = document.getElementById('centertextbox')
-	let boxText = document.getElementById('centertext');
-	let colors = ['red', 'green', 'blue', 'yellow', 'blue', 'pink', 'black'];
-	let runColorShift = 0;
-	let executed = true;
-
-	function runCancelColorShift() {
-		let color = setInterval(colorShift, 170)
-		boxText.innerHTML = 'in...';
-		boxText.style.fontFamily = "'Libre Franklin', sans-serif";
-		boxText.style.fontSize = '130px';
-		setInterval(count, 1000)
-		let sec = 11;
-			function count() {
-			if (sec <= 0) {
-				clearInterval(color);
-				boxText.innerHTML = 'redirecting...';
-			} else {
-			sec = sec-1;
-			boxText.innerHTML = sec;
-			console.log(sec);
-			}
-		}
-	}
-	function colorShift() {
-		let num = Math.round(Math.random()*6);
-		boxText.style.color = colors[num];
-		boxText.style.fontFamily = "'Libre Franklin', sans-serif";
-		boxText.style.fontSize = '130px';
-
-	}
-
-		
-	
-		
-	
-
-
-	//
-button.addEventListener('click', runCancelColorShift);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
+<script src = 'Projects.js'></script>
 </body>
 </html>
