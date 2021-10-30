@@ -56,7 +56,7 @@ let button = document.querySelector('#pickbutton');
 		}
 		if (redirectIteration == 2) {
 			clearInterval(redirectInter)
-			console.log('hey')
+			console.log('hey');
 		}
 	}
 button.addEventListener('click', runCancelColorShift);
