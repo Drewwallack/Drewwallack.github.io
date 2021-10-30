@@ -9,6 +9,8 @@ let button = document.querySelector('#pickbutton');
 	let redirectInter = 0;
 	let bigText = 0;
 	let redirectIteration = 0
+	let project = ['DogWheel.html', 'playingaround.html'];
+	// Random project selection
 	function runCancelColorShift() {
 		let color = setInterval(colorShift, 170)
 		boxText.innerHTML = 'in...';
@@ -23,7 +25,6 @@ let button = document.querySelector('#pickbutton');
 			} else {
 			sec = sec-1;
 			boxText.innerHTML = sec;
-			console.log(sec);
 			}
 		}
 	}
@@ -46,7 +47,6 @@ let button = document.querySelector('#pickbutton');
 			redirectCount()
 		}
 	}
-		
 	function redirectCount() {
 		bigText.innerHTML = redirect1[redirectDecide];
 		redirectDecide = redirectDecide+1;
@@ -56,11 +56,12 @@ let button = document.querySelector('#pickbutton');
 		}
 		if (redirectIteration == 2) {
 			clearInterval(redirectInter)
-			console.log('hey');
+			goPlease()
 		}
+	}
+	function goPlease() {
+		let proj = Math.round(Math.random()*1); //CHANGE THIS WHEN NEW PROJECTS
+		window.location.href = project[proj]
 	}
 button.addEventListener('click', runCancelColorShift);
 
-/* tomorrow - set pages equal to variables and insert them into arrays, random number generator to
-find which link to go to. Either find a way to redirect to said page, or replace bigText.innerHTML 
-with it. Goodnight! */
