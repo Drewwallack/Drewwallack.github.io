@@ -56,12 +56,11 @@ let button = document.querySelector('#pickbutton');
 		}
 		if (redirectIteration == 2) {
 			clearInterval(redirectInter)
-			
+			console.log('hey')
 		}
 	}
 button.addEventListener('click', runCancelColorShift);
 
-
 /* tomorrow - set pages equal to variables and insert them into arrays, random number generator to
 find which link to go to. Either find a way to redirect to said page, or replace bigText.innerHTML 
-with it. Goodnight.*/ 
+with it. Goodnight! */
