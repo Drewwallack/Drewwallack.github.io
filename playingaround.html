@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+	<style type=text/css>
+	#lol {
+		position: relative;
+		font-size: 300px;
+		color: red;
+
+	}
+	
+	
+	</style>
 <head>
 	<title></title>
 </head>
@@ -7,6 +17,7 @@
 
 
 <script type="text/javascript">
+	let body = document.querySelector('body');
 	let x = 0
 	let intCount = 0
 	function count() {
@@ -28,16 +39,21 @@
 		let executed = false;
 		document.addEventListener('click', intCount2)
 		function intCount2() {
-			intCount1 = setInterval(intCount3, 10)
+			let intCount1 = setInterval(intCount3, 10)
 		}
 		function intCount3() {
-			if (x==100) {
-				intCount1 = undefined;
+			if (x>100) {
+				clearInterval(intCount1)
 			}
-			console.log(x)
-			x++;
-			executed = true;
+			let hello = document.createElement('div')
+			document.body.appendChild(hello)
+			hello.innerHTML = x
+			hello.id = 'lol'
+			console.log(x);
+			x=x+1
+
 		}
+		// this code should not be taken seriously.
 
 </script>
 </body>

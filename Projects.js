@@ -1,4 +1,4 @@
-let button = document.querySelector('#pickbutton');
+	let button = document.querySelector('#pickbutton');
 	let box = document.getElementById('centertextbox')
 	let boxText = document.getElementById('centertext');
 	let colors = ['red', 'green', 'blue', 'yellow', 'blue', 'pink', 'black'];
@@ -54,14 +54,18 @@ let button = document.querySelector('#pickbutton');
 			redirectDecide = 0;
 			redirectIteration++;
 		}
-		if (redirectIteration == 2) {
+		if (redirectIteration == 1) {
 			clearInterval(redirectInter)
 			goPlease()
 		}
 	}
 	function goPlease() {
 		let proj = Math.round(Math.random()*1); //CHANGE THIS WHEN NEW PROJECTS
-		window.location.href = project[proj]
+		bigText.innerHTML = 'Sending You To ' + project[proj]
+		setTimeout (() => {
+			window.location.href = project[proj]
+		}, 2000)
+
 	}
 button.addEventListener('click', runCancelColorShift);
 
