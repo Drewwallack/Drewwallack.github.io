@@ -89,33 +89,57 @@
 	@keyframes shake {
   	10%, 90% {
     	transform: translate3d(-1px, 0, 0);
-    	color: red;
   }
   
   	20%, 80% {
     	transform: translate3d(2px, 0, 0);
-    	color: purple;
   }
 
   	30%, 50%, 70% {
     	transform: translate3d(-4px, 0, 0);
-    	color: blue;
   }
 
   	40%, 60% {
     	transform: translate3d(4px, 0, 0);
-    	color:black;
   }
 }
-
+	#or {
+		position: relative;
+		top: 70px;
+		font-size: 40px;
+		font-family: 'Arimo', sans-serif;
+	}
 	.dropdownbtn {
-		top: 100px;
+		position: relative;
 		background-color: moccasin;
   		color: white;
   		padding: 16px;
   		font-size: 16px;
   		border: none;
 }
+	.dropdownbtn:hover {
+		color: black;
+	}
+	.dropdown {
+		position: relative;
+		display: inline-block;
+		top: 85px;
+	}
+	.dropdownitems a {
+ 	 	color: black;
+ 	 	padding: 12px 16px;
+ 	 	text-decoration: none;
+ 	 	display: block;
+	}
+	.dropdownitems{
+		background-color: seashell;
+		display: none;
+		min-width: 194px;
+		position: absolute;
+	}
+	.dropdown:hover .dropdownitems{
+		display: block;
+	}
 /* figure this out lol */
 	
 	
@@ -142,11 +166,17 @@
 		Press Me!
 	</div>
 </div>
+<div id="or">
+	OR
+</div>
+
+
+
 <div class = "dropdown">
 	<button class = "dropdownbtn">
 		CHOOSE A PROJECT
 	</button>
-	<div class="dropdownitems">
+	<div class = "dropdownitems">
 		<a href="DogWheel.html">
 			Dog Randomizer #1
 		</a>
@@ -157,8 +187,12 @@
 			Home
 		</a>
 	</div>
-
 </div>
+
+
+
+
+
 </center>
 <script src = 'Projects.js'></script>
 </body>

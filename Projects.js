@@ -37,7 +37,11 @@
 	}
 	function redirect() {
 		let body = document.querySelector('body');
+		let pageOr = document.querySelector('#or')
+		let dropDown = document.querySelector('.dropdown')
 		box.remove();
+		pageOr.remove()
+		dropDown.remove()
 		body.style.backgroundColor = 'black';
 		bigText = document.createElement('div');
 		document.body.appendChild(bigText);
