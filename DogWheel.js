@@ -54,5 +54,9 @@ function finalPick() {
     if (hey==='NOTHING') {
     pickButton.style.backgroundColor = 'red'
     }
+    pickButton.addEventListener('click', resetCount)
+}
+function resetCount() {
+    window.location.href = 'DogWheel.html'
 }
 pickButton.addEventListener('click', runStopPickChoiceFirst)
