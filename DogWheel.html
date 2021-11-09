@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
 <style type="text/css">
 	#Title {
 		font-size: 80px;
@@ -14,8 +17,41 @@
 		position: relative;
 		text-align: center;
 		font-family: 'Luckiest Guy', cursive;
-
-
+		margin-bottom: 0px;
+	}
+	#container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	#pick-button {
+		position: relative;
+		height: 180px;
+		width: 180px;
+		border-radius: 50%;
+		text-align: center;
+		background-color: moccasin;
+		margin: auto;
+		top: 140px;
+	}
+	#pick-button-text {
+		position: relative;
+		text-align: center;
+		top: 75px;
+		font-size: 30px;
+	}
+	#pick-button:hover{
+		border: 10px solid red;
+		font-weight: bolder;
+	}
+	#final-pick-text {
+		position: relative;
+		text-align: center;
+		width:auto;
+		font-size: 100px;
+		color: black;
+		padding-bottom: 0px;
+		font-family: 'Merriweather', serif;
 	}
 
 @keyframes colorshift {
@@ -44,6 +80,7 @@
 	}
 	body{
 		margin-top: 0px;
+		margin: 0px;
 	}
 </style>
 </head>
@@ -56,7 +93,15 @@
 		THE JASPER WHEEL
 	</h1>
 </div>
+<div id="container">
+<div id="container-two"></div>
+<div id="pick-button">
+	<div id="pick-button-text">
+		PRESS ME
+	</div>
+</div>
+</div>
 
-
+<script src="DogWheel.js"></script>
 </body>
 </html>
