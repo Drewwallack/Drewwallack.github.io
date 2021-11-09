@@ -29,7 +29,7 @@ function pickChoice() {
         clearInterval(dogInterval)
         dogInterval = setInterval(pickChoice, 400)
     }
-    if (x==5) {
+    if (x==35) {
         clearInterval(dogInterval)
         finalPick()
     }
@@ -47,7 +47,7 @@ function finalPick() {
     pickButton.style.backgroundColor = 'green'
     } 
     if (hey==='BELLY RUBS' || hey==='HEAD SCRATCHES' || hey==='TREAT'){
-    pickButton.style.backgroundColor = 'moccasin'
+    pickButton.style.backgroundColor = 'yellow'
     }
     if (hey==='NOTHING') {
     pickButton.style.backgroundColor = 'red'
