@@ -43,6 +43,7 @@ function finalPick() {
     finalPickText.id = 'final-pick-text'
     pickButtonText.style.fontWeight = 'bold'
     pickButtonText.style.color = 'white'
+    pickButton.style.top = '80px'
     if (hey==='BIG TREAT' || hey==='WALK' || hey==='PARK') {
     pickButton.style.backgroundColor = 'green'
     } 
