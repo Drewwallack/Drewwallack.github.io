@@ -48,11 +48,11 @@ function finalPick() {
     pickButton.style.backgroundColor = 'green'
     } 
     if (hey==='BELLY RUBS' || hey==='HEAD SCRATCHES' || hey==='TREAT'){
+    pickButtonText.style.color = 'black'
     pickButton.style.backgroundColor = 'yellow'
     }
     if (hey==='NOTHING') {
     pickButton.style.backgroundColor = 'red'
     }
 }
-
 pickButton.addEventListener('click', runStopPickChoiceFirst)
