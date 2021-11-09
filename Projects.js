@@ -64,7 +64,7 @@
 		}
 	}
 	function goPlease() {
-		let proj = Math.round(Math.random()*1); //CHANGE THIS WHEN NEW PROJECTS
+		let proj = Math.round(Math.random()*1); 
 		bigText.innerHTML = 'Redirecting to ' + project[proj]
 		setTimeout (() => {
 			window.location.href = project[proj]
