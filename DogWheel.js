@@ -33,6 +33,11 @@ function pickChoice() {
         clearInterval(dogInterval)
         finalPick()
     }
+    if (hey==='HEAD SCRATCHES') {
+        pickButtonText.style.top = '50px'
+    } else {
+        pickButtonText.style.top = '75px'
+    }
 }
 
 function finalPick() {
@@ -45,14 +50,14 @@ function finalPick() {
     pickButtonText.style.color = 'white'
     pickButton.style.top = '80px'
     if (hey==='BIG TREAT' || hey==='WALK' || hey==='PARK') {
-    pickButton.style.backgroundColor = 'green'
+        pickButton.style.backgroundColor = 'green'
     } 
     if (hey==='BELLY RUBS' || hey==='HEAD SCRATCHES' || hey==='TREAT'){
-    pickButtonText.style.color = 'black'
-    pickButton.style.backgroundColor = 'yellow'
+        pickButtonText.style.color = 'black'
+        pickButton.style.backgroundColor = 'yellow'
     }
     if (hey==='NOTHING') {
-    pickButton.style.backgroundColor = 'red'
+        pickButton.style.backgroundColor = 'red'
     }
     pickButton.addEventListener('click', resetCount)
 }
