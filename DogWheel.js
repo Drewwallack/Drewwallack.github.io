@@ -9,10 +9,11 @@ let buttonContainerTwo = document.getElementById('container-two')
 let dogChoice = 0
 let hey = 0
 let title = document.querySelector('#Title')
+//selection interval
 function runStopPickChoiceFirst() {
     dogInterval = setInterval(pickChoice, 100)
 }
-
+//selection system
 function pickChoice() {
     title.innerHTML = 'SELECTING...'
     dogChoice = Math.round(Math.random()*7)
@@ -42,7 +43,7 @@ function pickChoice() {
         pickButtonText.style.top = '75px'
     }
 }
-
+//final selection
 function finalPick() {
     let finalPickText = document.createElement('div');
     buttonContainerTwo.appendChild(finalPickText);
@@ -55,7 +56,7 @@ function finalPick() {
     title.innerHTML = 'Jasper Gets...'
     if (hey==='BIG TREAT' || hey==='WALK' || hey==='PARK') {
         pickButton.style.backgroundColor = 'green'
-    } 
+    }
     if (hey==='BELLY RUBS' || hey==='HEAD SCRATCHES' || hey==='TREAT'){
         pickButtonText.style.color = 'black'
         pickButton.style.backgroundColor = 'yellow'
@@ -65,7 +66,9 @@ function finalPick() {
     }
     pickButton.addEventListener('click', resetCount)
 }
+//redirect
 function resetCount() {
     window.location.href = 'DogWheel.html'
 }
+
 pickButton.addEventListener('click', runStopPickChoiceFirst)
