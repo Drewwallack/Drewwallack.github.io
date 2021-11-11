@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<style type=text/css>
-	#lol {
-		position: relative;
-		font-size: 300px;
-		color: red;
 
-	}
 	
 	
 	</style>
@@ -19,42 +14,16 @@
 <script type="text/javascript">
 	let body = document.querySelector('body');
 	let x = 0
-	let intCount = 0
-	function count() {
-		if (x % 3 == 0 && x % 5 !== 0) {
-			console.log('fizz');
-		};
-		if (x % 5 == 0 && x % 3 !== 0) {
-			console.log('buzz');
-		}
-		if (x % 3 == 0 && x % 5 == 0) {
-			console.log('fizzbuzz')
-		}
-			console.log(x);
-			x=x+1
-		}
+	document.addEventListener('click', logHey)
+	
+	function hey(x,y) {
+		return x/y;
+	}
 
-		let intCount1 = 0
-		let intCount4 = 0
-		let executed = false;
-		document.addEventListener('click', intCount2)
-		function intCount2() {
-			let intCount1 = setInterval(intCount3, 10)
-		}
-		function intCount3() {
-			if (x>100) {
-				clearInterval(intCount1)
-			}
-			let hello = document.createElement('div')
-			document.body.appendChild(hello)
-			hello.innerHTML = x
-			hello.id = 'lol'
-			console.log(x);
-			x=x+1
-
-		}
-		// this code should not be taken seriously.
-
+	function logHey() {
+	body.innerHTML = hey(123120391029301293,12041)
+	}
+	body.style.fontSize = '120px'
 </script>
 </body>
 </html>

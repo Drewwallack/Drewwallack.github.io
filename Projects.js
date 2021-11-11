@@ -58,7 +58,7 @@
 			redirectDecide = 0;
 			redirectIteration++;
 		}
-		if (redirectIteration == 1) {
+		if (redirectIteration > 1) {
 			clearInterval(redirectInter)
 			goPlease()
 		}
@@ -71,5 +71,5 @@
 		}, 2000)
 
 	}
-button.addEventListener('click', runCancelColorShift);
+	button.addEventListener('click', runCancelColorShift);
 

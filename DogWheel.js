@@ -8,15 +8,18 @@ let buttonContainer = document.getElementById('container')
 let buttonContainerTwo = document.getElementById('container-two')
 let dogChoice = 0
 let hey = 0
+let title = document.querySelector('#Title')
 function runStopPickChoiceFirst() {
     dogInterval = setInterval(pickChoice, 100)
 }
 
 function pickChoice() {
+    title.innerHTML = 'SELECTING...'
     dogChoice = Math.round(Math.random()*7)
     pickButtonText.innerHTML = y[dogChoice]
     hey = y[dogChoice]
     x++;
+    console.log(x)
     if (x==15) {
         clearInterval(dogInterval)
         dogInterval = setInterval(pickChoice, 200)
@@ -49,6 +52,7 @@ function finalPick() {
     pickButtonText.style.fontWeight = 'bold'
     pickButtonText.style.color = 'white'
     pickButton.style.top = '80px'
+    title.innerHTML = 'Jasper Gets...'
     if (hey==='BIG TREAT' || hey==='WALK' || hey==='PARK') {
         pickButton.style.backgroundColor = 'green'
     } 
