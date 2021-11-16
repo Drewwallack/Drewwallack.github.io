@@ -91,8 +91,6 @@ function win() {
 function draw() {
     rpsHeader.innerHTML = 'ITS A DRAW!'
     setTimeout(restart, 2000)
-    y++;
-    z++;
 }
 function loss() {
     rpsHeader.innerHTML = 'YOU LOSE!'
@@ -101,7 +99,7 @@ function loss() {
 }
 function restart() {
     rpsHeader.innerHTML = 'ROCK, PAPER, SCISSORS'
-    scoreboard.innerHTML = y + ':' + x
+    scoreboard.innerHTML = y + ':' + z
     finalChoice = 0
     playerChoice = []
     x=0
