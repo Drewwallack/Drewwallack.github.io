@@ -23,8 +23,8 @@
 				clearInterval(countSet);
 				redirect()
 			} else {
-			sec = sec-1;
-			boxText.innerHTML = sec;
+			sec = sec-1
+			boxText.innerHTML = sec
 			}
 		}
 	}
