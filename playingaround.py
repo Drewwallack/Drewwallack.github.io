@@ -1,6 +1,1 @@
-from typing import List
-
-
-x = 100040042340203409234*3912023901284098230948
-
-print(x)
+print('Hello World')
