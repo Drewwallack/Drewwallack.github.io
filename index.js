@@ -1,6 +1,6 @@
 let rpsHeader = document.getElementById('rps-header')
 let rpsContainer = document.getElementById('rps-container')
-let r = document.getElementById('r');
+let r = document.getElementById('r')
 let p = document.getElementById('p')
 let s = document.getElementById('s')
 let ri = document.getElementById('ri')
@@ -24,7 +24,6 @@ function startGame() {
         setTimeout(computerChoice, 1000)
     }
 }
-
 function choseRock() {
     playerChoice.push('r')
     x++;
@@ -94,7 +93,7 @@ function draw() {
 }
 function loss() {
     rpsHeader.innerHTML = 'YOU LOSE!'
-    setTimeout(restart, 1000)
+    setTimeout(restart, 2000)
     z++;
 }
 function restart() {
