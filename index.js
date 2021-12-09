@@ -16,7 +16,7 @@ let finalChoice = 0
 let scoreboard = document.getElementById('scoreboard')
 
 function startGame() {
-    if (x<1) {
+    if (x < 1) {
         r.addEventListener('click', choseRock)
         p.addEventListener('click', chosePaper)
         s.addEventListener('click', choseScissors)
@@ -48,13 +48,13 @@ function choseScissors() {
 function computerChoice() {
     let computerChoice = Math.floor(Math.random() * 3)
     playerChoice.push(options[computerChoice])
-    if (options[computerChoice] == 'r'){
+    if (options[computerChoice] == 'r') {
         rpsHeader.innerHTML = 'COMPUTER CHOOSES ROCK'
     }
-    if (options[computerChoice] == 'p'){
+    if (options[computerChoice] == 'p') {
         rpsHeader.innerHTML = 'COMPUTER CHOOSES PAPER'
-    }   
-    if (options[computerChoice] == 's'){
+    }
+    if (options[computerChoice] == 's') {
         rpsHeader.innerHTML = 'COMPUTER CHOOSES SCISSORS'
     }
     setChoice()
@@ -101,6 +101,7 @@ function restart() {
     scoreboard.innerHTML = y + ':' + z
     finalChoice = 0
     playerChoice = []
-    x=0
+    x = 0
 }
+
 startGame()

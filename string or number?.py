@@ -1,3 +1,4 @@
+# string or number checker
 initial_imput = input('> ')
 IT = 0
 while True:

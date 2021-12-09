@@ -1,7 +1,6 @@
 # is it a palindrome?
 paliin = input('Enter a random word: ')
 
-
 def checkpalindrome():
     palicheck = []
     palireverse = []
