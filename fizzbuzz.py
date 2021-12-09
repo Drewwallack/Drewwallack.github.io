@@ -1,4 +1,7 @@
 # fizzbuzz
+from _typeshed import Self
+
+
 def fizzbuzz(num):
     if num % 3 == 0 and not num % 5 == 0:
         return 'fizz'
@@ -15,3 +18,4 @@ while y:
     print(fizzbuzz(x))
     if x == 12345:
         y = False
+        
