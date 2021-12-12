@@ -1,5 +1,4 @@
 # fizzbuzz
-from _typeshed import Self
 
 
 def fizzbuzz(num):
@@ -12,10 +11,8 @@ def fizzbuzz(num):
     return num
 
 
-y = True
-while y:
+while True:
     x = (int(input('number: ')))
     print(fizzbuzz(x))
     if x == 12345:
-        y = False
-        
+        break
