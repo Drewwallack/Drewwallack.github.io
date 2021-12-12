@@ -1,9 +1,10 @@
 import random
 player_score = 0
 computer_score = 0
+x = 1
 while True:
     game_board = []
-    playerinput = input('Choose Rock, Paper, or Scissors: ')
+    playerinput = input(f'Round {x}. Choose Rock, Paper, or Scissors: ')
     playerinput = playerinput.title()
     if playerinput == 'Quit':
         break
@@ -31,6 +32,7 @@ while True:
         computer_score += 1
     print(
         f'Your score is now {player_score} and the computer score is now {computer_score}')
+    x += 1
     if player_score == 10:
         print('You Win!')
         break
