@@ -1,7 +1,9 @@
-# is it a palindrome?
-paliin = input('Enter a random word: ')
 
-def checkpalindrome():
+
+while True:
+    paliin = input('Enter a random word: ')
+    if paliin == 'quit':
+        break
     palicheck = []
     palireverse = []
     for x in paliin.lower():
@@ -12,6 +14,3 @@ def checkpalindrome():
         print(f'{paliin} is a palindrome!')
     else:
         print(f'{paliin} is not a palindrome.')
-
-
-checkpalindrome()

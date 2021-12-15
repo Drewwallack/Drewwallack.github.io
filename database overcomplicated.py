@@ -4,7 +4,6 @@ heightlist = []
 weightlist = []
 automationbaby = [namelist, agelist, heightlist, weightlist]
 
-
 class Person:
     def __init__(self, name, age, height, weight):
         self.name = name

@@ -1,11 +1,7 @@
 let rpsHeader = document.getElementById('rps-header')
-let rpsContainer = document.getElementById('rps-container')
 let r = document.getElementById('r')
 let p = document.getElementById('p')
 let s = document.getElementById('s')
-let ri = document.getElementById('ri')
-let pi = document.getElementById('pi')
-let si = document.getElementById('si')
 let rps = document.querySelector('.rps-choices')
 let options = ['r', 'p', 's']
 let playerChoice = []
