@@ -2,7 +2,6 @@ from random import randint as ri
 while True:
     imput = input('How long should the story be? ')
     if imput == 'quit':
-        print('yes daddyyyy')
         break
     if imput.isdigit() != True:
         print('Please enter a number.')

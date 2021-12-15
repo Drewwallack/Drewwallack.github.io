@@ -28,11 +28,14 @@ class Main:
             self.game_over()
         for block in self.snake.body[1:]:
             if block == self.snake.body[0]:
-                self.game_over()
+                game_over()
 
     def game_over(self):
         pygame.quit()
         sys.exit()
+
+    def draw_score(self):
+        score_text = str(len(self.snake.body) - 3)
 
 
 class Snake:
@@ -76,6 +79,11 @@ class Fruit:
         self.pos = Vector2(self.x, self.y)
 
 
+def game_over():
+    pygame.quit()
+    sys.exit()
+
+
 pygame.init()
 cell_size = 40
 cell_number = 20
@@ -83,8 +91,8 @@ screen = pygame.display.set_mode(
     (cell_number * cell_size, cell_number * cell_size))
 clock = pygame.time.Clock()
 screen_update = pygame.USEREVENT
+game_font = pygame.font.Font(None, 25)
 pygame.time.set_timer(screen_update, 130)
-
 main_game = Main()
 
 while True:
@@ -107,6 +115,7 @@ while True:
             if event.key == pygame.K_DOWN:
                 if main_game.snake.direction.y != -1:
                     main_game.snake.direction = Vector2(0, 1)
+    pygame.display.set_caption('snake game')
     screen.fill(pygame.Color('white'))
     main_game.draw_elements()
     pygame.display.update()
