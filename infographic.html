@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Barlow&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet">
+        <style type="text/css">
+        #menu{
+		    height: 30px;
+		    background-color: moccasin;
+		    margin: 0px;
+		    transition: 0.2s;
+		    padding-top: 5px;
+		}
+	    #menu:hover{
+		    height: 60px;
+		    transition: 0.2s;
+		    font-size: 3vw;
+		}
+	    .categories{
+		    position: relative;
+		    display: inline-block;
+		    height: 98%;
+            width: 100%;
+            transition: 0s;
+            color: white;
+            text-align: center;
+            font-size: 4vh 3vw; 
+            font-family: 'Barlow', sans-serif;
+
+	    }
+	    .categories:hover{
+            color: black;
+            transition: 0s;
+            font-family: 'Arimo', sans-serif;
+	    }
+        body {
+            margin: 0px;
+        }
+        .title {
+            position: relative;
+            text-align: center;
+            font-family: 'Arimo', sans-serif;
+        }
+        #updates {
+            position: absolute;
+            text-align: left;
+            top: 200px;
+            left: 12%;
+            width: 400px;
+            height: fit-content;
+        }
+        #getdatmoney {
+            position: relative;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            background-image: url("dollar.jpeg");
+            background-size: contain;
+            background-color: green;
+        }
+        #getdatmoney:hover{
+            border: 4px solid gold;
+        }
+        .accumulator {
+            height: 200px;
+            width: 400px;
+            border: 3px solid black;
+            top: 500px;
+            font-family: 'Arimo', sans-serif;
+            font-size: 50px;
+        }
+        #accumulator1 {
+            left: 60%;
+            position: absolute;
+            display: inline-block;
+        }
+        #accumulator2 {
+            left: 12%;
+            position: absolute;
+            display: inline-block;
+        }
+        #acctitle1 {
+            position: absolute;
+            top: 400px;
+            left: 15%;
+        }
+        #acctitle2 {
+            position: absolute;
+            top: 400px;
+            left: 66%;
+        }
+        .option {
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            height: 23px;
+            width: 100px;
+            background-color: gold;
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Arimo', sans-serif;
+            font-size: 20px;
+        }
+        .option:hover {
+            background-color: moccasin;
+        }
+        .selectedoption {
+            border: 2px solid green;
+        }
+        #option1{
+            top: 175px;
+        }
+        #option2{
+            top: 250px;
+        }
+        #option3{
+            top: 325px;
+        }
+        </style>
+    </head>
+<body>
+    <div id="menu">
+		<a href="index.html">
+			<div class="categories">
+				Home
+			</div>
+		</a>
+    </div>
+
+<h1 class="title">
+    The Wealthiest Person in the World, Visualized
+</h1>
+<h2 class="title">Click on the money to make 1 dollar as the average American</h2>
+<h2 class="title" id="updates"></h2>
+<div id="option0" class="option selectedoption">1$</div>
+<div id="option1" class="option">1,000$</div>
+<div id="option2" class="option">10,000$</div>
+<div id="option3" class="option">100,000$</div>
+<div id="getdatmoney"></div>
+<h2 id="acctitle1" class="title">
+    Average American's Money
+</h2>
+<h2 id="acctitle2" class="title">
+    Elon Musk's Money
+</h2>
+<div id="accumulator1" class="accumulator">0</div>
+<div id="accumulator2" class="accumulator">0</div>
+<script src="infographic.js"></script>
+</body>
+</html>
