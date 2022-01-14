@@ -9,7 +9,7 @@ let redirectDecide = 0;
 let redirectInter = 0;
 let bigText = 0;
 let redirectIteration = 0
-let project = ['DogWheel.html', 'playingaround.html'];
+let project = ['DogWheel.html', 'playingaround.html', 'infographic.html'];
 // Random project selection
 function runCancelColorShift() {
 	let color = setInterval(colorShift, 170)
@@ -64,7 +64,7 @@ function redirectCount() {
 	}
 }
 function goPlease() {
-	let proj = Math.round(Math.random() * 1);
+	let proj = Math.round(Math.random() * 2);
 	bigText.innerHTML = 'Redirecting to ' + project[proj]
 	setTimeout(() => {
 		window.location.href = project[proj]
