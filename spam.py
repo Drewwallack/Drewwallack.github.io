@@ -15,5 +15,5 @@ for x in email_list:
     pyautogui.press('enter')
     pyautogui.typewrite(';)')
     pyautogui.press('enter')
-    pyautogui.typewrite('balls')
+    pyautogui.typewrite(';)')
     pyautogui.hotkey('shift', 'command', 'd')
