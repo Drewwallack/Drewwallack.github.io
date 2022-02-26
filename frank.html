@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&family=Barlow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frankenstein Adaptation</title>
+    <style type="text/css">
+        #menu{
+		    height: 30px;
+		    background-color: moccasin;
+		    margin: 0px;
+		    transition: 0.2s;
+		    padding-top: 5px;
+		}
+	    #menu:hover{
+		    height: 60px;
+		    transition: 0.2s;
+		    font-size: 3vw;
+		}
+	    .categories{
+		    position: relative;
+		    display: inline-block;
+		    height: 98%;
+            width: 100%;
+            transition: 0s;
+            color: white;
+            text-align: center;
+            font-size: 4vh 3vw; 
+            font-family: 'Barlow', sans-serif;
+	    }
+	    .categories:hover{
+            color: black;
+            transition: 0s;
+            font-family: 'Arimo', sans-serif;
+	    }
+        body {
+            margin: 0px;
+        }
+        #title {
+            text-align: center;
+            font-family: 'Arimo', sans-serif;
+            font-size: 60px;
+        }
+        #subheading {
+            text-align: center;
+            font-style: italic;
+            font-size: 25px;
+        }
+        #game-container {
+            margin-left: auto;
+            margin-right: auto;
+            height: 550px;
+            width: 1200px;
+            position: relative;
+            border: 3px solid black;
+        }
+        #situation-title {
+            position: relative;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 100px;
+            font-style: bold;
+        }
+        #situation-description {
+            text-align: center;
+            font-size: 20px;
+        }
+        #isolation-points {
+            position: relative;
+            height: fit-content;
+            width: fit-content;
+            font-family: 'Cinzel', serif;
+            font-style: bold;
+            font-size: 50px;
+            border: 3px solid moccasin;
+        }
+        #button1 {
+            left: 20%;
+        }
+        #button2 {
+            left: 42.5%;
+        }
+        #button3 {
+            right: 20%;
+        }
+        .button {
+            height: 75px;
+            width: 175px;
+            position: absolute;
+            top: 400px;
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 4vmax;
+            text-align: center;
+            padding: 0px;
+        }
+        .response {
+            border: 3px solid lightgreen;
+        }
+        .response:hover {
+            background-color: lightgreen;
+        }
+        .revenge {
+            border: 3px solid red;
+        }
+        .revenge:hover {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+		<a href="index.html">
+			<div class="categories">
+				Home
+			</div>
+		</a>
+    </div>
+    <h1 id="title">Frankenstein Adaptation: The Humanity of the Monster</h1>
+    <h3 id="subheading">Was Frankensteins Monsters actions justified? Was there a better way of achieving his motive?</h3>
+    <div id="game-container">
+        <div id="isolation-points">0</div>
+        <div id="situation-title">Welcome.</div>
+        <div id="situation-description">You are about to experience a simulation in which you will live the life of Frankenstein's Monster in the 21st century, in a world where the book has never been published. You will explore the life of the monster and attempt to intergrate into society. The counter in the top-right corner is a measure of your isolation points. The less isolation points you have, the more integrated you are.</div>
+        <div class="button response" id="button1">1</div>
+        <div class="button response" id="button2">BEGIN</div>
+        <div class="button response" id="button3">3</div>
+    </div>
+    <script text="frank.js"></script>
+</body>
+</html>

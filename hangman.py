@@ -6,7 +6,6 @@ list = ["awful", "banjo", "blank", "words", "shady", "quick", "quiet", "field", 
 
 def buildman(wordlist, wordlen, guesscount):
     hangmanguess = wordlist[random.randint(0, len(wordlist)-1)]
-    print(hangmanguess)
     while len(hangmanguess) != wordlen:
         hangmanguess = wordlist[random.randint(0, len(wordlist)-1)]
     og = hangmanguess
@@ -14,7 +13,6 @@ def buildman(wordlist, wordlen, guesscount):
     for letter in hangmanguess:
         arrhangmanguess.append(letter)
     hangmanguess = arrhangmanguess
-    print(hangmanguess)
     wrongletlist = ''
     rightletlist = []
     for x in range(wordlen):
