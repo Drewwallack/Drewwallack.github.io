@@ -7,11 +7,9 @@ var situationDescription = document.getElementById('situation-description')
 var isolationPointsDisplay = document.getElementById('isolation-points')
 var isolationPoints = 0
 let gameTrack = 0
-var x = 0
-var game = false
 // game text
 const titleI = 'Intro'
-const I = `Hearing soft rain patter on the metal trash cans and the concrete alleyway, you open your eyes to a foreign world. Confused at first, your worries are quelled by the soft sound of the rain and the sight of another creature staring at you, smiling. The smile feels good, comforting, but as you start to smile back, his smile fades into a look of distinct fear upon his face. His breathing quickens. You hope to calm him down, so you continue smiling, which only seems to make things worse. He starts walking away, and you start walking after him. The walk turns into a run, and after a few quick turns, you become lost in the blinding dark of the dimly lit night.
+const I = `Hearing soft rain patter on the metal trash cans and the concrete alleyway, you open your eyes to a foreign world. Confused at first, your worries are quelled by the soft sound of the rain and the sight of another creature staring at you, smiling. The smile feels good, comforting, but as you start to smile back, his smile fades into a look of distinct fear upon his face. His breathing quickens. You hope to calm him down, so you continue smiling, which only seems to make things worse. He starts walking away, and you start walking after him. The walk turns into a run, and after a few quick turns, you become lost in the dark of the dimly lit night.
 
 Press 1 to attempt to search for a place to stay. Press 2 to stay the night on the sidewalk.`
 const titleS1 = '1/1/22'
@@ -48,7 +46,7 @@ Nevertheless, pledging to figure out how to use the device, you go to sleep opti
 const gameTitleSequence = [titleI, titleS1, titleS2, titleS3, titleS4, titleS5, titleS6]
 const gameDescriptionSequence = [I, S1, S2, S3, S4, S5, S6]
 const gameDescriptionSequenceButTheyAreStrings = ['I', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6']
-const getGamePositionIndicator = {
+const advance = {
     'IC1':1,
     'IC2':2,
     'S1C1':3,
@@ -67,11 +65,7 @@ const getGamePositionIndicator = {
     'S6C2':null,
     'S6C3':null
 }
-let gamePositionIndicator = 0
-const getIsolationPoints = {
-    0:5,
-    1:0
-}
+// main game
 function game(){
     // story
     button1.style.opacity = 100
@@ -82,29 +76,26 @@ function game(){
     }
     situationTitle.innerText = gameTitleSequence[gameTrack]
     situationDescription.innerText = gameDescriptionSequence[gameTrack]
-    // getting isolation points
-    isolationPoints = getIsolationPoints[gameTrack] + isolationPoints
-    isolationPointsDisplay.innerText = isolationPoints
     // advance the game
     button1.addEventListener('click', clickOn1)
     button2.addEventListener('click', clickOn2)
     button3.addEventListener('click', clickOn3)
 }
 function clickOn1(){
-    gameTrack = getGamePositionIndicator[gameDescriptionSequenceButTheyAreStrings[gameTrack]+'C1']
+    gameTrack = advance[gameDescriptionSequenceButTheyAreStrings[gameTrack]+'C1']
     console.log(gameTrack)
     game()
 }
 function clickOn2(){
-    gameTrack = getGamePositionIndicator[gameDescriptionSequenceButTheyAreStrings[gameTrack]+'C2']
+    gameTrack = advance[gameDescriptionSequenceButTheyAreStrings[gameTrack]+'C2']
     console.log(gameTrack)
     game()
 }
 function clickOn3(){
-    gameTrack = getGamePositionIndicator[gameDescriptionSequenceButTheyAreStrings[gameTrack]+'C3']
+    gameTrack = advance[gameDescriptionSequenceButTheyAreStrings[gameTrack]+'C3']
     console.log(gameTrack)
     game()
 }
-button1.addEventListener('click', Game)
-button2.addEventListener('click', Game)
-button3.addEventListener('click', Game)
+button1.addEventListener('click', game)
+button2.addEventListener('click', game)
+button3.addEventListener('click', game)
