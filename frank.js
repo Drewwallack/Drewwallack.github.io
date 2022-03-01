@@ -12,7 +12,7 @@ const I = `Hearing soft rain patter on the metal trash cans and the concrete all
 
 Press 1 to attempt to search for a place to stay. Press 2 to stay the night on the sidewalk.`
 const titleS1 = '1/1/22'
-const S1 = `You travel to nearby shops and restaurants, which all turn out to be closed. Eventually, you stumble upon a dim 24 hour CVS, and attempt to enter. Immediately after entering, under the blinding fluorescent lights, another creature yelps and pulls out a black canister labeled, “pepper spray”
+const S1 = `You travel to nearby shops and restaurants, which all turn out to be closed. Eventually, you stumble upon a dim 24 hour CVS, and attempt to enter. Immediately after entering, under the blinding fluorescent lights, another creature yelps and pulls out a black canister labeled, “pepper spray”.
 
 Press 1 to attempt to swat the pepper spray. Press 2 to run away. 
 `
@@ -22,7 +22,7 @@ const S2 = `As you travel for a bench to rest, you stumble on two small creature
 Pressing any number will advance the game.
 `
 const titleS3 = '1/1/22'
-const S3 = `You swat the pepper spray out of the mans hand, displaying incredible strength that both the man and you did not expect to be true. In shock, the man stands still, and you begin to grab random objects. Soons, the night is lit with sirens and loud noises, and angry people barge into the store speaking some incomprehensible language. You sprint out of the store through a back door, but the person in the shop remembered enough detail for the police to construct a mediocre description of your face. You now have a rectangular piece of metal that lights up when touched, however.
+const S3 = `You swat the pepper spray out of the mans hand, displaying incredible strength that both the man and you did not expect to be true. In shock, the man stands still, and you begin to grab random objects. Soon, the night is lit with sirens and loud noises, and angry people barge into the store speaking some incomprehensible language. You sprint out of the store through a back door, but the person in the shop remembered enough detail for the police to construct a mediocre description of your face. You now have a rectangular device that lights up when touched, however.
 
 You think it may be useful. Press 1 to attempt to use the device. Press 2 to fall asleep. 
 `
@@ -113,7 +113,7 @@ Days pass. Using items you steal from fellow creatures, you bring severe harm to
 Reflecting on your years later in life, you feel a wave of sadness wash over you for the egregious acts you committed. Depressed, you are faced with a final choice. Press 1 to turn yourself into the police. Press 2 to remain.
 `
 const titleS18 = 'An End.'
-const S18 = `ou remain in your comfort zone, but you soon learn that this world was simply not built for you. You die in your sleep one month after your creation. 
+const S18 = `You remain in your comfort zone, but you soon learn that this world was simply not built for you. You die in your sleep one month after your creation. 
 
 Posthumously, your creator stumbles upon your body. He does not say a word, nor feel any emotion. He moves on with his life in relief.
 
@@ -248,9 +248,9 @@ function game() {
         situationTitle.style.color = 'red'
         gameBorder.style.border = '5.5px solid red'
     } else {
-        button1.classList.add('response')
-        button2.classList.add('response')
-        button3.classList.add('response')
+        button1.classList.replace('revenge', 'response')
+        button2.classList.replace('revenge', 'response')
+        button3.classList.replace('revenge', 'response')
         situationTitle.style.color = 'black'
         gameBorder.style.border = '3px solid black'
     }
