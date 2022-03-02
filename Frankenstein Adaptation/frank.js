@@ -32,7 +32,7 @@ const S4 = `After sprinting out of the store, you trip on a curb and fall hard o
 You fall asleep. Pressing any number will advance the game.
 `
 const titleS5 = '1/1/22'
-const S5 = `Sulking to an ideal looking piece of grass, you find a rectangular piece of metal that lit up when touched.
+const S5 = `Sulking to an ideal looking piece of grass, you find a rectangular device that lit up when touched.
 
 You think it may be useful. Press 1 to attempt to use the device. Press 2 to fall asleep.
 `
@@ -72,7 +72,7 @@ The pattern continues. For what seems to be an inconceivable amount of time, you
 Its time to make a decision. Press 1 to commit an act of revenge. Press 2 to remain in your condition.
 `
 const titleS12 = '1/2/22'
-const S12 = `In an attempt to display your humanity, you get on your knees and act like the other creatures in screaming. Even though they keep running away, you persist. Minutes fly by, and suddenly you are surrounded by a circle of creatures in matching outfits that look menacing. Still, you think they may still be friendly and continue your acts. Shouting intensifies, and the men dont move.
+const S12 = `In an attempt to display your humanity, you get on your knees and act like the other creatures in screaming. Even though they keep running away, you persist. Minutes fly by, and suddenly you are surrounded by a circle of creatures in matching outfits that look menacing. Shouting intensifies, and the men dont move.
 
 In the blink of an eye, a sharp pain in your left shoulder. As your eyes roll back into your skull you witness the moments of your short life, and pent up optimistic hopefulness materializes into anger, which materializes into a need for revenge. You regain consciousness. 
 
@@ -137,7 +137,7 @@ Thanks for Playing.
 -Drew
 `
 const titleS20 = 'An End.'
-const S20 = `Shackled and carried away to a maximum security prison, you learn the language from other inmates. Over the course of your life, you remain in prison, never getting a date in court. Yet, in prison, you become happy. Your fellow inmates, now that you know how to speak, love your personality and find your story fascinating. In fact, the inmates of the prison have also experienced the feelings that you have gone through, and they can sympathize with your story. Forced to be around different people, you are no longer isolated and have people to confide in. 
+const S20 = `Shackled and carried away to a maximum security prison, you learn the language from other inmates. Over the course of your life, you remain in prison, never getting a date in court. Yet, in prison, you become happy. Your fellow inmates, knowing you personally, love your personality and find your story fascinating. In fact, the inmates of the prison have also experienced the feelings that you have gone through, and they can sympathize with your story. Forced to be around different people, you are no longer isolated and have people to confide in. 
 
 With 50 years of good behavior, you are still never released, even though you are merely a scapegoat for the prejudice of the outside world.
 
@@ -145,7 +145,7 @@ You have reached an ending to the game. A seemingly somber ending, you lived a h
 
 Congratulations on achieving a relatively good ending. You were not integrated at all, but maybe that's the best reality in a prejudiced world.
 
-Thanks for Playing.
+Thanks for Playing
 -Drew
 `
 const titleS21 = '12/2/62-8/23/77'
