@@ -1,5 +1,3 @@
 # Drewwallack.github.io
 
-
-
 Welcome.
