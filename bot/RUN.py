@@ -5,7 +5,7 @@ import time
 date = '2022-05-25'
 seats = '4'
 email = 'dwallack123@gmail.com'
-password = 'Wisconsin1'
+password = 'wink-wink'
 restaurant = 'quality-eats-ues'
 location = 'Indoor Dining'
 prefered_times = ['19:30:00', '20:00:00', '18:00:00', '18:30:00', '17:00:00', '16:00:00', '20:30:00', '21:00:00']
