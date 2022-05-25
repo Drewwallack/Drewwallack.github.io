@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>RUN</string> 
+    <key>RunAtLoad</key>
+    <true/>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/Python 3.9</string>
+        <string>/Users/student/Desktop/repositories/Drewwallack.github.io/bot/RUN.py<string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+         <key>Hour</key>
+         <integer>15</integer>
+         <key>Minute</key>
+         <integer>10</integer>
+         <key>Weekday</key>
+         <integer>3</integer>
+    </dict>
+</dict>
+</plist>

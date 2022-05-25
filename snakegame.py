@@ -23,7 +23,7 @@ class Main:
             self.fruit.randomize()
             self.snake.add_block()
 
-    def check_fail(self):
+    def check_fail(self ):
         if not 0 <= self.snake.body[0].x < cell_number or not 0 <= self.snake.body[0].y < cell_number:
             self.game_over()
         for block in self.snake.body[1:]:
