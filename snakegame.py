@@ -4,6 +4,10 @@
 ## If you run into the walls or the snake's own body, it's game over
 ## To restart the game after losing, press the "R" key
 ## Note that the functionality for sound effects is present, but it requries a special audio file
+
+## Credit to https://youtu.be/QFvqStqPCRU for an introductory tutorial.
+
+
 import sys
 import pygame
 import random
