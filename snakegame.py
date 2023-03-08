@@ -1,9 +1,14 @@
+## Use the arrow keys to move the snake around the screen
+## The goal is to eat as many fruits as possible without running into the walls or the snake's own body
+## Every time you eat a fruit, your score will increase and the snake will grow longer
+## If you run into the walls or the snake's own body, it's game over
+## To restart the game after losing, press the "R" key
+## Note that the functionality for sound effects is present, but it requries a special audio file
 import sys
 import pygame
 import random
 from pygame.math import Vector2
 
-# Define colors
 BG_COLOR = (255, 243, 230)
 FRUIT_COLOR = (240, 84, 84)
 SNAKE_COLOR = (41, 39, 40)
