@@ -24,6 +24,7 @@ class Main:
         self.fruit = Fruit()
         self.score = 0
         self.fruits_eaten = 0
+        self.eat_sound = eat_sound
 
     def update(self):
         self.snake.move_snake()
@@ -43,6 +44,8 @@ class Main:
             self.score += 1
             self.fruits_eaten += 1
             self.snake.increase_speed()
+            self.eat_sound.play()
+
 
     def check_fail(self):
         if not 0 <= self.snake.body[0].x < cell_number or not 0 <= self.snake.body[0].y < cell_number:
