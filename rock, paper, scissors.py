@@ -1,4 +1,4 @@
-import random
+import random, time
 player_score = 0
 computer_score = 0
 x = 1
@@ -18,9 +18,11 @@ while True:
     else:
         print('please enter a valid answer. Either Rock, Paper, or Scissors')
         continue
+    time.sleep(1)
     computer_choices = ['Rock', 'Paper', 'Scissors']
     computerinput = computer_choices[random.randint(0, 2)]
     print(f'The computer has chosen: {str(computerinput)}')
+    time.sleep(0.5)
     game_board.append(computerinput)
     if game_board == ['Rock', 'Scissors'] or game_board == ['Scissors', 'Paper'] or game_board == ['Paper', 'Rock']:
         print(f'{playerinput} beats {computerinput}. You win!')
@@ -30,9 +32,11 @@ while True:
     if game_board == ['Rock', 'Paper'] or game_board == ['Scissors', 'Rock'] or game_board == ['Paper', 'Scissors']:
         print(f'{playerinput} loses to {computerinput}')
         computer_score += 1
+    time.sleep(0.5)
     print(
         f'Your score is now {player_score} and the computer score is now {computer_score}')
     x += 1
+    time.sleep(0.5)
     if player_score == 10:
         print('You Win!')
         break

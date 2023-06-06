@@ -1,3 +1,5 @@
+# I made a classic space invaders game with various classes, class methods, and a runtime while loop. knowlege for this code comes from various youtube pygame tutorials, though it is original.
+
 import pygame
 import random
 
@@ -14,7 +16,7 @@ pygame.display.set_caption("Space Invaders")
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-# Define particle class
+# Define particle class, which includes parameters for making a particle
 class Particle:
     def __init__(self, x, y, size, color, speed):
         self.x = x
@@ -29,7 +31,7 @@ class Particle:
     def draw(self):
         pygame.draw.circle(screen, self.color, (self.x, self.y), self.size)
 
-# Define particle manager class
+# Define particle manager class, which concerns the creation of particles, and their addition into the particle array.
 class ParticleManager:
     def __init__(self):
         self.particles = []
@@ -43,6 +45,7 @@ class ParticleManager:
         size = random.randint(5, 20)
         color = random.choice([WHITE, (255, 0, 0), (0, 255, 0), (0, 0, 255)])
         speed = random.uniform(0.1, 1)
+        # adds the particle to the array
         particle = Particle(x, y, size, color, speed)
         self.particles.append(particle)
 
@@ -57,8 +60,9 @@ class ParticleManager:
     def increaseSpawnRate(self):
         if self.spawn_rate < self.max_spawn_rate:
             self.spawn_rate += 1
+            # gradually increases spawn rate.
 
-# Define shooter class
+# Define shooter class, with operations regarding movement, and the creation of an instance of the Bullet class.
 class Shooter:
     def __init__(self, x, y, width, height, color, speed):
         self.x = x
@@ -86,8 +90,9 @@ class Shooter:
 
     def shoot(self):
         return Bullet(self.x + self.width // 2, self.y)
+        # instance of bullet class.
 
-# Define bullet class
+# Define bullet class, which concerns drawing and moving bullet.
 class Bullet:
     def __init__(self, x, y):
         self.x = x
@@ -98,6 +103,7 @@ class Bullet:
 
     def update(self):
         self.y -= self.speed
+        # changes y value by subtracting speed from it. (y values in pygame are on a negative axixs)
 
     def draw(self):
         pygame.draw.circle(screen, self.color, (self.x, self.y), self.radius)
@@ -114,6 +120,7 @@ clock = pygame.time.Clock()
 
 key_states = {}
 
+# run loop, which checks for keyboard input, and whether or not the user closes the window
 while running:
     screen.fill(BLACK)
 
@@ -121,10 +128,13 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
+            # check for key down
             key_states[event.key] = True
             if event.key == pygame.K_SPACE:
+                #check for space key
                 bullet = shooter.shoot()
                 bullets.append(bullet)
+                # append new Bullet instance to array.
         elif event.type == pygame.KEYUP:
             key_states[event.key] = False
 
@@ -144,6 +154,7 @@ while running:
 
     for particle in particle_manager.particles:
         for bullet in bullets:
+            # checking and responding to bullet-particle collision by coordinating coordinate values.
             if abs(particle.x - bullet.x) < particle.size and abs(particle.y - bullet.y) < particle.size:
                 particle_manager.particles.remove(particle)
                 bullets.remove(bullet)
@@ -155,25 +166,25 @@ while running:
 
     for bullet in bullets:
         bullet.draw()
+    #maintains drawing bullets
 
+    #updates game score when particle is hit.
     score_text = f"Score: {score}"
     font = pygame.font.Font(None, 36)
     text = font.render(score_text, True, WHITE)
     screen.blit(text, (10, 10))
 
-    # Spawn particles
+    # Spawn particles, in accordance with spawn rate.
     particle_manager.spawn_timer += 1
     if particle_manager.spawn_timer >= particle_manager.spawn_rate:
         particle_manager.createParticles()
         particle_manager.spawn_timer = 0
 
-    # Check for particles reaching the bottom
+    # Check for particles reaching the bottom, quitting if so.
     for particle in particle_manager.particles:
         if particle.y > screen_height:
             running = False
-
     particle_manager.increaseSpawnRate()
-
     pygame.display.flip()
     clock.tick(60)
 
