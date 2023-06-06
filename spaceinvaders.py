@@ -1,5 +1,7 @@
 # I made a classic space invaders game with various classes, class methods, and a runtime while loop. knowlege for this code comes from various youtube pygame tutorials, though it is original.
 
+# works best with terminal python, or a VSCode terminal, which is what I used.
+
 import pygame
 import random
 
