@@ -1,0 +1,68 @@
+import random
+import string
+
+alphabet = string.ascii_uppercase
+
+def one_time_pad_encode(input_text, key):
+    """
+    Encodes the input text using the one-time pad cipher.
+
+    Args:
+        The text to be encoded.
+        The one-time pad key.
+
+    Returns:
+        The encoded text.
+    """
+    input_text = input_text.upper()
+    key = key.upper()
+    cypher = ''
+    for i, letter in enumerate(input_text):
+        if letter not in alphabet:
+            cypher += letter  # Preserve non-alphabetic characters
+        else:
+            letter_value = alphabet.index(letter)
+            key_value = alphabet.index(key[i % len(key)])  # Wrap around the key
+            shifted_value = (letter_value + key_value) % 26 
+            cypher += alphabet[shifted_value] #returns to the cypher string the shifted_value index of the alphabet list
+    return cypher
+
+def one_time_pad_decode(cypher, key):
+    """
+    Decodes the cipher text using the one-time pad cipher.
+
+    Args:
+        The cipher text to be decoded.
+        The one-time pad key.
+
+    Returns:
+        The decoded text.
+    """
+    cypher = cypher.upper()
+    key = key.upper()
+    decoded_text = ''
+    for i, letter in enumerate(cypher):
+        if letter not in alphabet:
+            decoded_text += letter  # Preserve non-alphabetic characters
+        else:
+            letter_value = alphabet.index(letter)
+            key_value = alphabet.index(key[i % len(key)])  # Wrap around the key
+            shifted_value = (letter_value - key_value) % 26
+            decoded_text += alphabet[shifted_value] # returns to the string the shifted_value index of the alphabet list
+    return decoded_text
+
+
+# Prompt user for input and selected option
+input_text = input('Input Text Here: ')
+option = input('Decode or encode: ')
+
+if option.lower() == 'encode':
+    key = input('Enter the one-time pad key: ')
+    encoded_text = one_time_pad_encode(input_text, key)
+    print('Encoded Text:', encoded_text)
+elif option.lower() == 'decode':
+    key = input('Enter the one-time pad key: ')
+    decoded_text = one_time_pad_decode(input_text, key)
+    print('Decoded Text:', decoded_text)
+
+
